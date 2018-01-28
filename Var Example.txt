@@ -1,0 +1,29 @@
+*** Settings ***
+Suite Setup
+Suite Teardown
+Library           Selenium2Library
+Library           BuiltIn
+Resource          Data/Test_Resource.txt
+Library           OperatingSystem
+
+*** Variables ***
+${VarOne}    ${EMPTY}
+${VarTwo}    ${EMPTY}
+
+*** Test Cases ***
+TCone
+	${VarOne}    set variable    56
+	run keyword if    '${VarOne}'!='${VarTwo}'    Log    This is my message
+	Log    ${VarOne}
+	Log    ${VarTwo}
+
+*** Keywords ***
+Open Browser Fun
+    [Arguments]    ${URL}    ${BrowserName}
+    comment    Here is the Browser
+    Open Browser    ${URL}    ${BrowserName}
+    Maximize Browser Window
+
+Close Browser Fun
+    Sleep    2s
+    Close Browser
