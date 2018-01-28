@@ -15,7 +15,6 @@ TCone
 	run keyword if    '${VarOne}'!='${VarTwo}'    Log    This is my message
 	Log    ${VarOne}
 	Log    ${VarTwo}
-	Write
 
 *** Keywords ***
 Open Browser Fun
