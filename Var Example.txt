@@ -3,7 +3,6 @@ Suite Setup
 Suite Teardown
 Library           Selenium2Library
 Library           BuiltIn
-Resource          Data/Test_Resource.txt
 Library           OperatingSystem
 
 *** Variables ***
